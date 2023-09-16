@@ -22,7 +22,8 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
-  return <div>{expenses && <ExpensesList list={expenses} />}</div>;
+
+  return expenses && <ExpensesList list={expenses} />;
 }
 
 export default App;

@@ -1,15 +1,9 @@
-import { Col, Row } from "react-bootstrap";
-import ExpenseItem from "../ExpenseItem";
+import ExpenseItem from "../ExpenseItem/index.js";
 function ExpensesList({ list }) {
-  return list.map((item) => {
-    return (
-      <Row>
-        <Col></Col>
-        <ExpenseItem expense={item} />
-
-        <Col></Col>
-      </Row>
-    );
-  });
+  return (
+    <div className="md:mx-40">
+      {list && list.map((item) => <ExpenseItem expense={item} />)}
+    </div>
+  );
 }
 export default ExpensesList;
